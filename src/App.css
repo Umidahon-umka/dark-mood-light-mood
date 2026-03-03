@@ -1,0 +1,72 @@
+/* Umumiy fon ranglari */
+body.light-mode {
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+body.dark-mode {
+  background-color: #0d1117;
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: 0.4s;
+}
+
+/* Toggle asosi */
+.toggle-container {
+  width: 100px;
+  height: 45px;
+  background-color: transparent;
+  border: 2px solid #28a745; /* Yashil chegara */
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 5px;
+  font-size: 18px;
+}
+
+/* Harakatlanuvchi yashil doira */
+.toggle-circle {
+  width: 35px;
+  height: 35px;
+  background-color: #28a745; /* Yashil rang */
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  left: 5px;
+  color: white;
+}
+
+/* Dark mode bo'lganda doirani o'ngga surish */
+.toggle-container.dark .toggle-circle {
+  left: 55px;
+}
+
+.icon {
+  opacity: 0.3;
+  transition: 0.3s;
+}
+
+.icon.active {
+  opacity: 1;
+}
